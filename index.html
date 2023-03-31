@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head> 
+        <title>Parallax Scrolling Websites | Vanilla Javascripts</title>
+        <link rel ="stylesheet" type="text/css" href = "style.css">
+        <meta name="viewport" content="width=device-width,initial-scape=1.0"/>
+    </head>
+    <body>
+        <header>
+            <a href="#" class = "logo"> Logo</a>
+            <ul>
+                <li><a href ="#" class="active">Home</a></li>
+                <li><a href ="#">About</a></li>
+                <li><a href ="#">Work</a></li>
+                <li><a href ="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src  = "images/stars.png" id="stars">
+            <img src  = "images/moon.png" id="moon">
+            <img src  = "images/mountains_behind.png" id="mountains_behind">
+            <h2  id="text">Moon Light</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src  = "images/mountains_front.png" id="mountains_front">
+
+        </section>
+        <div class ="sec"  id ="sec">
+            <h2> Parallax  Scrolling Effect</h2>
+            <p>Paragraphs are the building blocks of papers.
+                 Many students define paragraphs in terms of length: 
+                 a paragraph is a group of at least five sentences, 
+                 a paragraph is half a page long, etc. In reality, though, 
+                 the unity and coherence of ideas among sentences is what 
+                 constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance 
+                 do not determine whether a section in a paper is a paragraph. For instance,
+                  in some styles of writing, particularly journalistic styles, a paragraph 
+                  can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.
+
+            </p>
+        </div>
+        <script>
+            let moon = document.getElementById('moon');
+            let star = document.getElementById('stars');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let mountains_front = document.getElementById('mountains_front');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            window.addEventListener('scroll',function(){
+                let val = window.scrollY;
+                star.style.left = val*0.25+'px'; 
+                moon.style.top = val*1.05+'px'; 
+               
+                mountains_behind.style.top =  value * 0.5 +'px';
+                mountains_front.style.top =  value * 0.5 +'px';
+                text.style.marginRight = value *  4 +'px';
+                text.style.marginTop = value *  1.5 +'px';
+            })
+        </script>
+    </body>
+
+    
+</html>
